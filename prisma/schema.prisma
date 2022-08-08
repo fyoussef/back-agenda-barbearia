@@ -14,6 +14,7 @@ model User {
   email       String?       @unique
   Reservation Reservation[]
 
+  @@unique([name, phone])
   @@map("user")
 }
 
