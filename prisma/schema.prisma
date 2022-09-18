@@ -7,24 +7,43 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model User {
+model Client {
   id          String        @id @default(uuid())
   name        String
-  phone       String        @unique
+  phone       String?       @unique
   email       String?       @unique
   Reservation Reservation[]
 
   @@unique([name, phone])
-  @@map("user")
+  @@map("client")
 }
 
 model Reservation {
   id            String   @id @default(uuid())
-  id_user       String
-  user          User     @relation(fields: [id_user], references: [id])
+  id_client     String
+  client        Client   @relation(fields: [id_client], references: [id])
   start_booking DateTime
   end_booking   DateTime
+  id_service    String
+  Service       Service  @relation(fields: [id_service], references: [id])
 
   @@unique([start_booking, end_booking])
   @@map("reservation")
+}
+
+model Schedules {
+  hour String @unique
+
+  @@map("schedules")
+}
+
+model Service {
+  id          String        @id @default(uuid())
+  name        String
+  duration    Int
+  price       Float
+  Reservation Reservation[]
+
+  @@unique([name])
+  @@map("service")
 }
