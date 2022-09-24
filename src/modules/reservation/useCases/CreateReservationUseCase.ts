@@ -24,11 +24,10 @@ export class CreateReservationUseCase {
         const client = clientAlreadyExists ? clientAlreadyExists : await prisma.client.create({
             data: {
                 name, 
-                phone: phone ?? null, 
-                email: email ?? null
+                phone: phone ?? null
             }
         })
-
+ 
         const service = await findServiceByName(services)
 
         const data = service.map(service => {
@@ -39,8 +38,6 @@ export class CreateReservationUseCase {
                 id_service: service.id
             }
         })
-
-        console.log(data)
 
         await prisma.reservation.createMany({
             data: data

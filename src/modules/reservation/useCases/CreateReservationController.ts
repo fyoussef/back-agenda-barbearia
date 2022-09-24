@@ -25,7 +25,6 @@ export class CreateReservationController {
             end_booking,
             start_booking,
             services,
-            email,
             phone
         })
 
