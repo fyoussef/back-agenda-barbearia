@@ -25,4 +25,4 @@ app.use((err: Error, req: Request, res: Response, next: NextFunction) => {
 
 })
 
-app.listen(80, () => console.log('Servidor rodando :80'))
+app.listen(5050, () => console.log('Servidor rodando :5050'))
