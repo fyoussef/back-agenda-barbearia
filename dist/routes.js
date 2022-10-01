@@ -13,6 +13,9 @@ var getSchedulesController = new GetSchedulesController_1.GetSchedulesController
 var createSchedulesController = new CreateSchedulesController_1.CreateSchedulesController();
 var createServiceController = new CreateServiceController_1.CreateServiceController();
 var createReservationController = new CreateReservationController_1.CreateReservationController();
+routes.get('/', function (req, res) {
+    return res.send('DEU');
+});
 routes.post('/user', createClientController.handle);
 routes.get('/hours', getSchedulesController.handle);
 /* routes.post('/schedules', createSchedulesController.handle) */

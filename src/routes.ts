@@ -13,6 +13,10 @@ const createSchedulesController = new CreateSchedulesController()
 const createServiceController = new CreateServiceController()
 const createReservationController = new CreateReservationController()
 
+routes.get('/', (req, res) => {
+    return res.send('DEU')
+})
+
 routes.post('/user', createClientController.handle)
 
 routes.get('/hours', getSchedulesController.handle)
