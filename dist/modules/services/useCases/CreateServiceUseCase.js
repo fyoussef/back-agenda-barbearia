@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+exports.CreateServiceUseCase = void 0;
 var prismaClient_1 = require("../../../database/prismaClient");
 var CreateServiceUseCase = /** @class */ (function () {
     function CreateServiceUseCase() {
@@ -61,7 +62,9 @@ var CreateServiceUseCase = /** @class */ (function () {
                         }
                         return [4 /*yield*/, prismaClient_1.prisma.service.create({
                                 data: {
-                                    name: name, duration: duration, price: price
+                                    name: name,
+                                    duration: duration,
+                                    price: price
                                 }
                             })];
                     case 2:

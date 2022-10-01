@@ -4,7 +4,7 @@ import { FindClient } from "./FindClient"
 
 export class CreateClientUseCase {
 
-    async execute({ name, phone, email }: ICreateClient) {
+    async execute({ name, phone }: ICreateClient) {
 
         const { findByNameAndPhone, findByName } = new FindClient()
 
@@ -17,8 +17,7 @@ export class CreateClientUseCase {
         await prisma.client.create({
             data: {
                 name, 
-                phone: phone ?? null,
-                email: email ?? null
+                phone: phone ?? null
             }
         })
 

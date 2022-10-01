@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+exports.FindService = void 0;
 var prismaClient_1 = require("../../../database/prismaClient");
 var FindService = /** @class */ (function () {
     function FindService() {

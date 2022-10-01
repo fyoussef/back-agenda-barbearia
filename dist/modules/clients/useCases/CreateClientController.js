@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+exports.CreateClientController = void 0;
 var CreateClientUseCase_1 = require("./CreateClientUseCase");
 var CreateClientController = /** @class */ (function () {
     function CreateClientController() {

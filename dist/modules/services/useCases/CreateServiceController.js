@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+exports.CreateServiceController = void 0;
 var CreateServiceUseCase_1 = require("./CreateServiceUseCase");
 var CreateServiceController = /** @class */ (function () {
     function CreateServiceController() {
@@ -49,7 +50,9 @@ var CreateServiceController = /** @class */ (function () {
                         _a = req.body, name = _a.name, duration = _a.duration, price = _a.price;
                         createServiceUseCase = new CreateServiceUseCase_1.CreateServiceUseCase();
                         return [4 /*yield*/, createServiceUseCase.execute({
-                                name: name, duration: duration, price: price
+                                name: name,
+                                duration: duration,
+                                price: price
                             })];
                     case 1:
                         _b.sent();

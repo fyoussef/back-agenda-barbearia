@@ -36,13 +36,14 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+exports.CreateClientUseCase = void 0;
 var prismaClient_1 = require("../../../database/prismaClient");
 var FindClient_1 = require("./FindClient");
 var CreateClientUseCase = /** @class */ (function () {
     function CreateClientUseCase() {
     }
     CreateClientUseCase.prototype.execute = function (_a) {
-        var name = _a.name, phone = _a.phone, email = _a.email;
+        var name = _a.name, phone = _a.phone;
         return __awaiter(this, void 0, void 0, function () {
             var _b, findByNameAndPhone, findByName, clientExists, _c;
             return __generator(this, function (_d) {
@@ -66,8 +67,7 @@ var CreateClientUseCase = /** @class */ (function () {
                         return [4 /*yield*/, prismaClient_1.prisma.client.create({
                                 data: {
                                     name: name,
-                                    phone: phone !== null && phone !== void 0 ? phone : null,
-                                    email: email !== null && email !== void 0 ? email : null
+                                    phone: phone !== null && phone !== void 0 ? phone : null
                                 }
                             })];
                     case 5:

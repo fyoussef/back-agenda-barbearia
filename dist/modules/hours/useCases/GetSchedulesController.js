@@ -36,6 +36,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
     }
 };
 exports.__esModule = true;
+exports.GetSchedulesController = void 0;
 var GetSchedulesUseCase_1 = require("./GetSchedulesUseCase");
 var GetSchedulesController = /** @class */ (function () {
     function GetSchedulesController() {
