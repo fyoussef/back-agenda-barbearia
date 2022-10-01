@@ -22,5 +22,5 @@ app.use(function (err, req, res, next) {
         message: 'Internal server error'
     });
 });
-app.listen(5050, function () { return console.log('Servidor rodando :5050'); });
+app.listen(80, function () { return console.log('Servidor rodando :80'); });
 //# sourceMappingURL=server.js.map
